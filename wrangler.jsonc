@@ -1,0 +1,20 @@
+/**
+ * voice-quote
+ * Serves https://voice-quote.netlify.app at https://voice-quote.devartslab.com
+ * Deploy: npm run deploy
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "voice-quote-proxy",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-30",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // custom_domain auto-provisions the DNS record + TLS cert
+  "routes": [{ "pattern": "voice-quote.devartslab.com", "custom_domain": true }],
+  "workers_dev": false,
+
+  "vars": {
+    "ORIGIN": "https://voice-quote.netlify.app",
+  },
+}

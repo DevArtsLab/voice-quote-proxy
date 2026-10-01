@@ -1,0 +1,22 @@
+{
+  "name": "voice-quote",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Worker proxy: serves voice-quote.netlify.app at voice-quote.devartslab.com",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260930.2",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.145.0"
+  },
+  "allowScripts": {
+    "esbuild@*": true,
+    "workerd@*": true
+  }
+}
