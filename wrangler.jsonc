@@ -16,5 +16,6 @@
 
   "vars": {
     "ORIGIN": "https://voice-quote.netlify.app",
+    "API_ORIGIN": "https://quote-builder-backend.fly.dev",
   },
 }
